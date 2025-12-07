@@ -1,0 +1,9 @@
+from fastapi import APIRouter
+
+router = APIRouter(prefix="/auth", tags=["auth"])
+
+
+@router.get("/ping")
+async def ping() -> dict[str, str]:
+    return {"status": "ok"}
+
